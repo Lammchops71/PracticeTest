@@ -41,8 +41,8 @@ GROUP BY yearID"
 result2<-sqldf(query)
 
 ggplot()+
-  geom_line(data=result2,aes(x=yearID, y=Avg_Salary), size=1.1, color="black")+
-  geom_point(data=result2,aes(x=yearID, y=Avg_Salary),size=2, color="light blue")+
+  geom_line(data=result2,aes(x=yearID, y=Avg_Salary), size=1.1, color="light blue")+
+  geom_point(data=result2,aes(x=yearID, y=Avg_Salary),size=1, color="black")+
   ggtitle("Average Annual MLB Salary")+
   xlab("Year")+
   ylab("Average Salary")
