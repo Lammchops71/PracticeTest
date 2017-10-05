@@ -8,12 +8,15 @@ output:
 
 ```{r setup, include=FALSE}
 library(flexdashboard)
+library(Lahman)
+library(sqldf)
+library(ggplot2)
 ```
 
 Column {data-width=650}
 -----------------------------------------------------------------------
 
-### Chart A
+### MLB Salary Distribution
 
 ```{r}
 #1. Extract salaires from salary table and create histogram
@@ -31,7 +34,7 @@ ggplot()+
 Column {data-width=350}
 -----------------------------------------------------------------------
 
-### Chart B
+### Average Annual MLB Salary
 
 ```{r}
 #2. Extract year & avg. salary for the year and make time-series plot.
@@ -49,7 +52,7 @@ ggplot()+
 
 ```
 
-### Chart C
+### MLB Salary vs. Homerun Production
 
 ```{r}
 #3. Extract salary & homeruns and make a scatterplot with salary on the x-axis. HR >= 10
